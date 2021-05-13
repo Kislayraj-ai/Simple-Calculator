@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#section {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+		'Helvetica Neue', sans-serif;
+	background: rgb(44, 43, 43);
+}
+#section p {
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-shadow: -5px 10px 5px #000;
+}
+.main {
+	width: 350px;
+	height: 450px;
+	background: #ee0979; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ff6a00, #ee0979); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ff6a00, #ee0979);
+	display: grid;
+	grid-template-rows: 100px 20px 300px;
+	grid-template-columns: 350px;
+	gap: 10px;
+	box-shadow: -6px 15px 10px #000;
+	border-radius: 0.5rem;
+}
+.extra {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	cursor: pointer;
+}
+.extra span {
+	padding: 1rem;
+	box-sizing: border-box;
+	font-size: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.extra :nth-child(1) {
+	width: 60%;
+}
+.extra :nth-child(2) {
+	width: 30%;
+}
+.select {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 0.8rem;
+	box-sizing: border-box;
+	margin-top: 10px;
+}
+.select .numbers {
+	display: grid;
+	grid-template-columns: repeat(3, 80px);
+	gap: 4px;
+	padding-left: 0.5rem;
+	box-sizing: border-box;
+}
+.select .numbers span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.select .operators {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.select .operators button {
+	width: 80px;
+	height: 55px;
+	cursor: pointer;
+	padding: 0.20rem 2rem;
+	outline: none;
+	border: none;
+	font-size: 20px;
+}
+
+.select .operators .operatorSign {
+	margin-top: 5px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.select .numbers span,
+.operators button,
+.extra span {
+	background-color: rgba(255, 255, 255, 0.281);
+	backdrop-filter: blur(10px);
+}
+
+/*result div css**/
+.resultDiv {
+	background: white;
+	position: relative;
+	box-shadow: inset 0px 4px 2px rgb(138, 138, 138), inset 3px 0px 5px rgb(134, 134, 134);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+.resultDiv .resutlDivSub {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 25px;
+	visibility: hidden;
+	padding-right: 1rem;
+	/* background: red; */
+}
+
+/** classes to be added through javascript*/
+.resutlDivSub.effectFirst {
+	top: 2%;
+	font-size: 15px;
+}
+.resutlDivSub.effectOperator {
+	top: 15%;
+	font-size: 15px;
+}
+.resutlDivSub.effectSecond {
+	top: 28%;
+	font-size: 15px;
+}
